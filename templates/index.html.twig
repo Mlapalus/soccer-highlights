@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body%}
+    {% include('_header.html.twig') %}
+
+    <main role="main">
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    {% for video in videos %}
+                     {{  include('_card.html.twig', {video: video}) }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+            <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+        </div>
+    </footer>
+{% endblock %}

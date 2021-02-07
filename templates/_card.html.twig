@@ -1,0 +1,22 @@
+<div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+        {{ video.videos.0.embed | raw }}
+        <h6>{{ video.competition.name }}</h6>
+        <h6>{{ video.title }} / {{ video.videos.0.title }}</h6>
+        <div class="card-body">
+            <p class="card-text">{{ video.date | date('d-m-Y') }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{{ video.url }}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Stats</button>
+                    </a>
+                </div>
+                <div class="btn-group">
+                    <a href="{{ video.competition.url }}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">League</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
